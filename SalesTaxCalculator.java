@@ -20,12 +20,12 @@ public class SalesTaxCalculator {
             } else if (args[0].compareTo("Hawaii") == 0) {
                 // instantiate the state to Hawaii
                 myState = new Hawaii();
-                // set the behavior of Alaska to NoTax
+                // set the behavior of Hawaii to FourPointFivePercent
                 myState.setSalesTaxBehavior(new FourPointFivePercent());
                 // calculate the tax for Hawaii from arg 2
                 myState.showTax(Double.parseDouble(args[1]));
             } else {
-                // a state or string other than IN an AK was supplied
+                // a state or string other than IN or AK or HW was supplied
                 System.out.println("Unknown state: " + args[0]);
             }
         } catch (IndexOutOfBoundsException e) {
